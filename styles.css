@@ -85,7 +85,7 @@ header nav ul li a:hover {
 }
 
 .articles-container article {
-    background-color: #f9dbdb;
+    background-color: #f4a6a6;
     padding: 30px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -182,7 +182,7 @@ section {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px hwb(0 9% 91% / 0.568);
 }
 
 section h2 {
@@ -203,6 +203,130 @@ section a {
 
 section a:hover {
     text-decoration: underline;
+}
+
+/* Style du tableau */
+.historique-web {
+    margin: 30px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.historique-web table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.historique-web th, .historique-web td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.historique-web th {
+    background-color: #333;
+    color: white;
+}
+
+.historique-web tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.historique-web tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Style du formulaire */
+.contact-form {
+    width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #bf7016;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.btn-envoyer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-envoyer:hover {
+    background-color: hsl(0, 81%, 69%);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.historique-web table,
+.contact-form {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 80%;
+    }
+
+    .historique-web {
+        width: 95%;
+    }
+
+    .historique-web th, .historique-web td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .btn-envoyer {
+        padding: 8px;
+    }
 }
 
 /* Footer */
@@ -257,4 +381,5 @@ footer p {
         font-size: 0.9rem;
     }
 }
+
 
